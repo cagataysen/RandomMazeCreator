@@ -206,7 +206,7 @@ void motion(int m[mazeDimensions][mazeDimensions], int &r, int &c) //find a way 
 
 
 
-bool canmotion(int m[mazeDimensions][mazeDimensions], int r, int c) //eger bitisik kareler hareket ettirilebiliyorsa return true
+bool canmotion(int m[mazeDimensions][mazeDimensions], int r, int c) 
 {
 	bool motionable = false;
 
@@ -234,7 +234,7 @@ bool canmotion(int m[mazeDimensions][mazeDimensions], int r, int c) //eger bitis
 		&& m[r - 2][c] == Wall
 		&& m[r - 1][c + 1] == Wall && m[r - 1][c - 1] == Wall
 		&& m[r - 1][c] == Wall
-		&& c != 0 && c != mazeDimensions - 1) //zora girmediysen saga ya da sola git 
+		&& c != 0 && c != mazeDimensions - 1) 
 	{
 		motionable = true;
 	}
@@ -252,10 +252,10 @@ bool canmotion(int m[mazeDimensions][mazeDimensions], int r, int c) //eger bitis
 
 int findStart()
 {
-	return 1 + rand() % (mazeDimensions - 2); // arabanin baslayacagi yeri bulan matematiksel islem
+	return 1 + rand() % (mazeDimensions - 2); // it starts where car is going to start 
 }
 
-void printScreen(int m[mazeDimensions][mazeDimensions]) //labirenti ekrana yazdiran kod
+void printScreen(int m[mazeDimensions][mazeDimensions]) 
 {
 
 	cout << time(0) - t0 << endl;
@@ -320,7 +320,7 @@ void makeMove(int m[mazeDimensions][mazeDimensions], int &r, int &c, int &direct
  12 - up
  */
 
-	switch (direction) //önce fonksiyonları tanımlıyoruz switch case içinde
+	switch (direction) 
 	{
 	case 3:
 		direction = right(m, r, c);
